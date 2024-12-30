@@ -23,8 +23,8 @@ if __name__ == '__main__':
 
 2. Create a virtual environment:
    ```bash
-   python3 -m venv venv
-   source venv/Scripts/activate
+   python3 -m venv .venv
+   .venv/Scripts/activate
    ```
 
 3. Install dependencies:

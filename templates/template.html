@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+</head>
+<body>
+    <h1>Hello, {{ name }}!</h1>  {# Comment in Jinja2 #}
+    <p>Welcome to {{ place }}.</p>
+
+    {% if items %}  <!-- Check if items list is not empty -->
+        <h2>Items List:</h2>
+        <ul>
+            {% for item in items %}  <!-- Loop through the items list -->
+                <li>{{ item }}</li>
+            {% endfor %}  <!-- End of loop -->
+        </ul>
+    {% else %}  <!-- If items list is empty -->
+        <p>No items to display.</p>
+    {% endif %}  <!-- End of if condition -->
+</body>
+</html>

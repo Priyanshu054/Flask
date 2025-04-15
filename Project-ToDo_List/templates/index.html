@@ -10,7 +10,7 @@
     <div class="container">
         <h1>To-Do List</h1>
 
-        <form action="{{ url_for('add_task') }}" method="POST">
+        <form action="{{ url_for('add_task') }}" method="POST">  {# Using url_for to generate the URL for the add_task route #}
             <input type="text" name="task" placeholder="Enter a new task" required>
             <button type="submit">Add Task</button>
         </form>
@@ -18,8 +18,8 @@
         <ul>
             {% for task in tasks %}
                 <li>
-                    <span class="task-text">{{ task }}</span>
-                    <a href="{{ url_for('delete_task', task_id=loop.index0) }}" class="delete-btn">×</a>
+                    <span class="task-text">{{ task }}</span>  {# Displaying the task text #}
+                    <a href="{{ url_for('delete_task', task_id=loop.index0) }}" class="delete-btn">×</a>  {# Using loop.index0 to get the index of the task #}
                 </li>
             {% else %}
                 <li>No tasks added yet!</li>

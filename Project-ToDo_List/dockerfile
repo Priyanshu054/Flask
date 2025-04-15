@@ -1,0 +1,14 @@
+# use the latest Python 3.12 Alpine image
+FROM python:3.12-alpine
+
+# Set the working directory in the container
+WORKDIR /to-do_app   
+
+# Copy the current directory contents into the container at /app
+COPY . .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+EXPOSE 5000
+
+CMD ["python", "app.py"]
